@@ -1,0 +1,285 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0D090A;
+    flex-direction: column;
+}
+
+
+
+
+.container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    background: #0D090A;
+    padding: 20px;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+#header {
+    width: 100%;
+    height: 8%;
+    background: #937B63;
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+#window{
+    display:none;
+}
+
+#column-one{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagebox{
+    background: #0D090A;
+    margin: 10px 10px 10px 10px;
+    height: 90%;
+    width: auto;
+}
+
+#list{
+    background: #0D090A;
+    margin: 10px 10px 10px 10px;
+    height: 90%;
+    width: auto;    
+}
+
+#homebar {
+    width: 90%;
+    height: 15%;
+    background: #E6EFEC;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.homebuttons {
+    color: #0D090A;
+    text-align: left;
+    font-size: 20px;
+    width: 85%;
+    padding: 5px;
+    height: 30%;
+    background-color: #E6EFEC;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    ;
+}
+
+.homebuttons:hover{
+    background-color: #999d9e;
+}
+
+
+#playlists {
+    width: 90%;
+    height: 80%;
+    
+}
+
+
+
+#column-two{
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+
+#musiccard {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    background: #937B63;
+}
+
+#gallery {
+    overflow: hidden;
+    width: auto;
+    height: 90%;
+    width: 90%;
+}
+
+.box {
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    background: #521945;
+}
+
+
+#box4 {
+    width: auto;
+    height: auto;
+}
+
+#column-three {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0D090A;
+    width: 40%;
+    height: 100%;
+    background: #1985A1;
+}
+
+#song-name-container{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+#song-image-container{
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 60%;
+}
+
+#current-song-name{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight:500;
+    font-size: 30px;
+}
+
+#current-song-image{
+    height: 100%;
+    width: auto;
+
+}
+
+
+
+
+
+@media screen and (max-height: 550px) {
+
+   
+    #column-three {
+        display: none;
+    }
+    #box4{
+        display: none;
+    }
+    #gallery{
+        display: none;
+    }
+    #musiccard{
+        display: none;
+    }
+    #column-two{
+        display: none;
+    }
+    .container{
+        display: none;
+    }
+
+    #header{
+        height: 20%;
+
+    }
+    .music-container{
+        height: 80%;
+    }
+
+
+    #alert {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+    } 
+  
+    #alert > h2 {
+      text-align: center;
+    }
+} 
+
+/*(max-width: 800px)*/
+
+@media screen {
+    .container{
+        color:#937B63;
+    }    
+}
+
+
+
+
+
+/*hkvkvhkhfkgfkghcvkghk*/
+
+
+@media screen and (max-width:900px ){
+    #box4 {
+        display: none;
+    }
+    #column-one{
+        width: 20%;
+    }
+    #song-image-container{
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 60%;
+    }
+
+    #column-two{
+        display: none;
+    }
+
+    #musiccard {
+        display: none;
+    }
+
+    #gallery {
+        display: none;
+    }
+
+    #column-three{
+    width: 80%;
+    display: flex;
+    }
+    #fake{
+        display: none;
+    }
+    #toggleButton{
+        display: none;
+    }
+}
+@media screen and (max-width:490px ) {
+    #current-song-image{
+        height: 60%;
+    }
+    #controls{
+        flex-direction: column;
+    }
+}

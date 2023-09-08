@@ -1,0 +1,604 @@
+#playlists {
+    padding-top: 8px;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll {
+    max-height: 320px; /* Adjust this value as needed */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px;
+    align-items: center;
+}
+
+.scroll::-webkit-scrollbar{
+    display: none;
+  }
+
+.theme-button {
+    height: 100px;
+    width: 100px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    stroke-width: 0;
+    cursor: pointer;
+    background-color: #ffeefb;
+    border: none;
+}
+
+.theme-button:hover {
+    background-color: #a2b8c7;
+  }
+  
+.theme-button:active {
+    background-color: #21618c;
+    color: aqua;
+  }
+
+
+  .theme-button:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+  }
+  /* DARK MODE ---------------------------------------------------------------------------------------------------------------- */
+
+.dark-mode .container {
+background-color: #1e1e1e;
+}
+
+.dark-mode #musiccard {
+    background-color: #3e3e42;
+}
+.dark-mode .box {
+    background-color: #252526;
+}
+.dark-mode .subcard1 {
+    background-color: #007acc;
+}
+
+.dark-mode .subcard2 {
+    background-color: #007acc;
+}
+
+.dark-mode #homebar {
+    background-color:#3e3e42;
+}
+.dark-mode .homebuttons {
+    color: #ffeefb;
+    background-color: #3e3e42;
+}
+
+.dark-mode .homebuttons:hover {
+    color: #ffeefb;
+    background-color:#2d2d30;
+}
+
+.dark-mode .theme-button{
+    background-color:#3e3e42;
+    color: #ffeefb;
+}
+.dark-mode .theme-button:hover {
+    background-color: rgb(208, 236, 255);
+    color: #252526;
+  }
+  
+.dark-mode .theme-button:active {
+    background-color: 	#007acc;
+    color: #ffeefb;
+  }
+
+.dark-mode .card {
+    background-color: #3e3e42;
+    color: #ffeefb;
+}
+.dark-mode #column-three {
+    background-color: #3e3e42;
+    color:  #ffeefb;
+}
+.dark-mode #header {
+    background-color: #252526;
+    color: #007acc;
+}
+
+.dark-mode .action-btn {
+    background-color: #ffeefb;
+    color: #007acc;
+}
+
+.dark-mode .progress-container {
+    background-color: #ffeefb;
+}
+
+.dark-mode .music-container {
+    background-color: #007acc;
+}
+
+/* BLUE MODE------------------------------------------------------------------------------------------------------------------------------- */
+
+.blue-mode .container {
+    background-color: #000C18;
+}
+
+.blue-mode #column-three {
+    background-color: #B4965D;
+    color: #000C18;
+}
+
+.blue-mode .custom-volume-slider{
+    background:#B4965D ;
+
+}
+
+.blue-mode .subcard1{
+    background-color: #6E5388;
+}
+.blue-mode .subcard2 {
+    background-color: #6E5388;
+}
+.blue-mode .custom-volume-slider::-webkit-slider-thumb {
+    background-color: #082050;
+}
+.blue-mode #header {
+    background-color: #252526;
+    color: #B4965D;
+}
+
+.blue-mode .action-btn {
+    background-color: #B4965D;
+    color: #082050;
+}
+
+.blue-mode .progress-container {
+    background-color: #B4965D;
+}
+
+.blue-mode .progress{
+    background: #082050;
+}
+
+.blue-mode .box {
+    background-color: #082050;
+}
+
+.blue-mode #header {
+    background-color: #6E5388;
+}
+
+.blue-mode #musiccard {
+    background-color: #6E5388;
+}
+
+.blue-mode .homebuttons {
+    background-color: #6E5388;
+}
+
+.blue-mode .homebuttons:hover {
+    background-color: #F17CC6;
+    color: #ffeefb;
+}
+
+.blue-mode #homebar {
+    background-color: #6E5388;
+}
+
+.blue-mode .theme-button {
+    background-color: #6E5388;
+}
+
+.blue-mode .theme-button:hover {
+    background-color: #F17CC6;
+    color: #ffeefb;
+}
+.blue-mode .theme-button:active {
+    background-color: #2074fb;
+    color: #ffeefb;
+  }
+
+.blue-mode .card {
+    background-color: #B4965D;
+    color: #000C18;
+}
+
+
+.blue-mode .music-container {
+    background-color: #13772A;
+}
+
+/* RED THEME-------------------------------------------------------------------------------------------------------------------------------- */
+
+.red-mode .container {
+    background-color: #290000;
+}
+
+.red-mode .subcard1 {
+    background-color: #D8591C;
+}
+.red-mode .subcard2 {
+    background-color: #D8591C;
+}
+.red-mode .box {
+    background-color: #390000;
+}
+.red-mode .homebuttons {
+    background-color: #BE8479;
+    color: #290000;
+}
+
+.red-mode .homebuttons:hover {
+    background-color: #E62514;
+    color: #ffeefb;
+}
+
+.red-mode #homebar {
+    background-color: #BE8479;
+}
+
+.red-mode .theme-button {
+    background-color: #BE8479;
+    color: #290000;
+}
+
+.red-mode .theme-button:hover {
+    background-color: #E62514;
+    color: #ffeefb;
+}
+.red-mode .theme-button:active {
+    background-color: #8BC466;
+    color: #ffeefb;
+  }
+
+.red-mode #header {
+    background-color: #8BC466;
+}
+
+.red-mode #musiccard {
+    background-color: #E29125;
+}
+
+.red-mode .card {
+    background-color:#BE8479;
+    color:#290000;
+}
+.red-mode .music-container {
+    background-color: #D8591C;
+}
+.red-mode #column-three {
+    background-color: #E29125;
+    color:#290000
+}
+
+.red-mode .custom-volume-slider::-webkit-slider-thumb {
+    background-color: #290000;
+}
+
+.red-mode .custom-volume-slider{
+    background:#E29125 ;
+}
+
+.red-mode #header {
+    background-color: #D8591C;
+    color: #290000;
+}
+
+.red-mode .action-btn {
+    background-color: #E29125;
+    color: #290000;
+}
+
+.red-mode .progress-container {
+    background-color: #290000;
+}
+
+.red-mode .progress{
+    background: #8BC466;
+}
+
+
+/* RANDOM THEME------------------------------------------------------------------------------------------------------------------------------ */
+
+.random-mode .container {
+    background-color: #E4572E;
+}
+
+.random-mode .subcard1{
+    background-color: #E4572E;
+}
+
+
+.random-mode .subcard2 {
+    background-color: #E4572E;
+}
+
+.random-mode .action-btn{
+    background-color: #17BEBB;
+    color: #fff;
+}
+.random-mode .box {
+    background-color: #17BEBB;
+}
+
+.random-mode .homebuttons {
+    background-color: #2E282A;
+    color: #fff;
+}
+
+.random-mode .homebuttons:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.random-mode #homebar {
+    background-color: #2E282A;
+}
+
+.random-mode .theme-button {
+    background-color: #2E282A;
+    color: #fff;
+}
+
+.random-mode .theme-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+.random-mode .theme-button:active {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+.random-mode #header {
+    background-color: #76B041;
+}
+
+.random-mode #musiccard {
+    background-color: #6610F2;
+}
+
+.random-mode .card {
+    background-color:#ED33B9;
+    color:#fff;
+}
+.random-mode .music-container {
+    background-color: #FFC914;
+}
+.random-mode #column-three {
+    background-color: #00ff00;
+}
+
+.random-mode .progress-container {
+    background-color: #fff;
+}
+
+/* LIGHT THEME------------------------------------------------------------------------------------------------------- */
+
+.light-mode .container {
+    background-color: #edeced;    
+}
+
+.light-mode .box {
+    background-color: #f7f7f7;
+}
+
+.light-mode .subcard1{
+    background-color: #007acc;
+}
+
+
+.light-mode .subcard2 {
+    background-color: #007acc;
+}
+
+.light-mode .card{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-mode .music-container {
+    background-color: #007acc;
+}
+
+.light-mode #header {
+    background-color: #ffffff;
+    color: #007acc;
+}
+
+.light-mode .action-btn {
+    background-color: #fff;
+    color: #007acc;
+}
+
+.light-mode .progress-container {
+    background-color: #fff;
+}
+
+.light-mode #column-three {
+    background-color: #fbfbfb;
+}
+
+.light-mode .theme-button{
+    background-color:#ffffff;
+    color: #000;
+}
+.light-mode .theme-button:hover {
+    background-color: rgb(208, 236, 255);
+    color: #252526;
+  }
+  
+.light-mode .theme-button:active {
+    background-color: 	#007acc;
+    color: #ffeefb;
+  }
+
+  .light-mode #homebar {
+    background-color: #ffffff;
+  }
+  
+  .light-mode .homebuttons:hover {
+    background-color: #f7f7f7;
+  }
+
+  .light-mode .homebuttons {
+    background-color: #ffffff;
+  }
+
+  /* BLADE THEME--------------------------------------------------------------------------------------------------------- */
+
+  .blade-mode .container {
+    background-color: #180b5b;
+  }
+
+  .blade-mode .box {
+    background-color: #271e8c;
+  }
+
+  .blade-mode .card {
+    background-color: #5631a6;
+    color: #ffeefb;
+  }
+
+  .blade-mode .subcard1{
+    background-color: #180b5b;
+  }
+  .blade-mode .subcard2{
+    background-color: #180b5b;
+  }
+
+
+  .blade-mode .homebuttons {
+    background-color: #5631a6;
+    color: #ffeefb;
+  }
+  .blade-mode .homebuttons:hover {
+    background-color: #8b66c4;
+    color: #ffeefb;
+  }
+
+  .blade-mode #homebar {
+    background-color: #5631a6;
+    color: #ffeefb;
+  }
+
+  .blade-mode .theme-button {
+    background-color: #8b66c4;
+    color: #ffeefb;
+  }
+  .blade-mode .theme-button:hover {
+    background-color: #e66db3;
+    color: #ffeefb;
+  }
+
+  .blade-mode .theme-button:active {
+    background-color: #416075;
+    color: #ffeefb;
+  }
+
+  .blade-mode #column-three {
+    background-color: #416075;
+    color: #ffeefb;
+  }
+
+  .blade-mode .music-container {
+    background-color: #c6238b;
+  }
+
+  .blade-mode .action-btn {
+    background-color: #e66db3;
+    color: #ffeefb;
+  }
+
+  .blade-mode .progress-container {
+    background-color: #fff;
+  }
+  
+.blade-mode #header {
+    background-color: #e66db3;
+    color: #fff;
+}
+
+/* MINT MODE-------------------------------------------------------------------------------------------------------------- */
+
+.mint-mode .container {
+    background-color: #35524A;
+}
+
+.mint-mode .subcard1{
+    background-color: #35524A;
+}
+.mint-mode .subcard2{
+    background-color: #35524A;
+}
+
+.mint-mode .box {
+    background-color: #627C85;
+}
+
+.mint-mode #homebar {
+    background-color: #779CAB;
+}
+
+.mint-mode .homebuttons {
+    background-color: #779CAB;
+}
+
+.mint-mode .homebuttons:hover {
+    background-color: #A2E8DD;
+}
+
+.mint-mode .theme-button {
+    background-color: #8DC2C4;
+}
+
+.mint-mode .theme-button:hover{
+    background-color: #A2E8DD;
+}
+
+.mint-mode .theme-button:active{
+    background-color: #35524A;
+    color: #32DE8A;
+}
+
+.mint-mode .card {
+    background-color: #8DC2C4;
+    color: #000;
+}
+
+.mint-mode #column-three {
+    background-color: #A2E8DD;
+}
+
+.mint-mode #header {
+    background-color: #6AE3B4;
+    color: #fff;
+}
+
+.mint-mode .music-container {
+    background-color: #32DE8A;
+}
+
+.mint-mode .progress {
+    background-color: #8DC2C4;
+}
+
+.mint-mode .progress-container {
+    background-color: #627C85;
+}
+
+.mint-mode .action-btn {
+    background-color: #627C85;
+    color: #8DC2C4;
+}
+
+.mint-mode .custom-volume-slider {
+    background-color: #627c85;
+}
+
+.mint-mode .custom-volume-slider::-webkit-slider-thumb {
+    background-color: #8DC2C4;
+}

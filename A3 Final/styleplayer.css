@@ -1,0 +1,199 @@
+/* Reset styles and common styles for all elements */
+* {
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+    
+/* Common styles for body */
+body {
+    background-image: linear-gradient(
+        90deg,
+        rgba(247, 247, 247, 1) 23.8%,
+        rgba(252, 221, 221, 1) 92%
+    );
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Common styles for buttons */
+.action-btn {
+    background-color: #937B63;
+    border: 0;
+    color: #000000;
+    font-size: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+    border-radius: 4px;
+}
+
+
+
+.action-btn:hover{
+    font-size: 12px;
+    box-shadow: 0 2px 40px 0 rgba(252, 169, 169, 0.6);
+}
+
+.action-btn.action-btn-big {
+    color: #000000;
+    font-size: 15px;
+}
+
+.action-btn.action-btn-big:hover{
+    font-size: 19px;
+}
+
+/* Container styles */
+.music-container {
+    background-color: #521945;
+    box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    height: 17%;
+    bottom : 0%;
+    width: 100%;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+
+/* Image container styles */
+.img-container {
+    display: none;
+    width: 70px;
+    z-index: -5;
+    position: absolute; /* Add this line */
+}
+
+.img-container::after {
+    content: "";
+    background-color: #E6EFEC;
+    border-radius: 50%;
+    position: absolute; /* Change relative to absolute */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%); /* Center the ::after element */
+    box-shadow: 0 0 0px 10px #000;
+}
+
+.img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: inherit;
+
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Music info styles */
+.music-info {
+    background-color: rgba(60, 175, 203, 0);
+    padding: 10px;
+    border-radius: 15px;
+    width: auto;
+    opacity: 1;
+    bottom: 7px;
+    font-size: 17px;
+    color: #E6EFEC;
+}
+
+
+
+/* Progress bar styles */
+.progress-container {
+    background-color: #937B63;
+    border-radius: 5px;
+    border: 5px;
+    cursor: pointer;
+    height: 5px;
+    width: 90%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.progress {
+    background-color: #000000;
+    border-radius: 5px;
+    height: 100%;
+    width: 60%;
+    transform: width 0.1s linear;
+    transform: translate(0,0%);
+
+}
+.progress:hover{
+    box-shadow: 0 2px 40px 0 rgb(44, 0, 0);
+}
+
+/* Adjust the styles for the navigation container */
+.navigation {
+    display: flex;
+    flex-direction: row; /* Arrange buttons horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    bottom: 2.6px; /* Adjust the desired vertical position */
+    width: 60%; /* Make it span the entire width of the parent */
+    margin-right: 20px ;
+
+}
+
+.empty{
+    width: 20%;
+}
+
+#controls{
+    display: flex;
+    flex-direction: row;
+}
+
+#cover-clone{
+    display: flex;
+    position: relative;
+    margin: 10px;
+    height: 90%;
+}
+
+@media screen and (max-height: 550px) {
+    .music-container{
+        height: 80%;
+    }
+}
+@media screen and (max-width:490px ) {
+    #controls{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigation{
+        font-size: 10px;
+        margin-right: 0px;
+    }
+}
